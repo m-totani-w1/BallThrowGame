@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\Program Files\Ultraleap\LeapSDK\samples3\BallThrow.cpp">
+    <ClCompile Include="ThrowBall.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
