@@ -23,7 +23,7 @@ using namespace std;
 #define DEFAULT_HEIGHT 600	/* ウィンドウの高さ */
 #define TSTEP 0.004	/* フレームごとの時間 */
 
-double t = 0; /* 時間 */
+
 Vector direction = { 0,0,-1 };	/*ボールの発射方向*/
 bool handCheck = false;	/*手がある時に発射*/
 DWORD start = timeGetTime();       // スタート時間
@@ -191,7 +191,6 @@ void myGround(double height) {
 /* 画面表示 */
 void display(void) {
 
-
 	/* 光源の位置 */
 	static GLfloat lightpos[] = { 3.0, 4.0, 5.0, 1.0 };
 
@@ -206,10 +205,11 @@ void display(void) {
 	static double initVy = 0;
 	static double initVz = 0;
 
-
+	static double t;	/* 時間 */
+	if (flag) t = 0;
+	
 	// pyv y軸の速度 pa 加速度 pe 跳ね上がり係数
 
-	double t;
 	/* 物理演算 */
 	if (flag || (handCheck && t > 1)) {
 		start = timeGetTime();       // スタート時間
